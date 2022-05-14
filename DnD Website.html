@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dungeons and Dragons Character Generator</title>
+    <!-- Link to stylesheet using rel and href attributes -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title header">D&D 5e CHARACTER GENERATOR</h1>
+
+    </header>
+
+    <img id="DNDlogo" src="https://logos-world.net/wp-content/uploads/2021/12/DnD-Symbol.png" width="400" alt="D&D Logo">
+
+    <!-- TODO: add class attribute  -->
+    <section>
+        <p>So, you're making a new character? Whether this is your first character or your one-hundred-and-first, this tool will work for you!</p>
+        <a href="https://i.imgur.com/MtM04Tl.jpg"> Here's a handy guide for character creation!</a>
+
+        <section>
+
+      <h2 class="title">Character Details</h2>
+      <h3>Basic Information</h3>
+      <label for="race">Choose a race:</label>
+
+   
+      <select name="race" id="race">
+        <option value="Human">Human</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="HalfElf">Half Elf</option>
+        <option value="Gnome">Gnome</option>
+        <option value="HalfOrc">Half Orc</option>
+        <option value="Tiefling">Tiefling</option>
+        <option value="Dragonborn">Dragonborn</option>
+      </select>
+
+      <P></P>
+
+     
+
+      <label for="class">Choose a class:</label>
+
+      <select name="class" id="class">
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+        <option value="Artificer">Artificer</option>
+      </select>
+
+    </section>
+      <P></P>
+
+      <section>
+
+      <form>
+        <label for="playername">Player Name:</label>
+        <input type="text" id="Playername" name="Playername"><br>
+        <label for="name">Character Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label>
+        <input type="number" min="0" id="age" name="age">
+
+      </form>
+
+    </section>
+
+    <section>
+
+      <h3>Character Stats</h3>
+
+      <p>The following table summarizes methods for generating stats:</p>
+    <!-- change to radio buttons with generated descriptions--> 
+
+    <table style=margin:20px>
+      <tr>
+        <th style="width:3%">Method</th>
+  
+        <th style="width:20%">Description</th>
+      </tr>
+      <tr>
+        <td>Standard</td>
+        <td>Roll 4d6, discard the lowest die result, and add the three remaining results together. 
+          Record this total and repeat the process until six numbers are generated. Assign these totals to your ability scores as you see fit.</td>
+      </tr>
+      <tr>
+        <td>Classic</td>
+        <td>Roll 3d6 and add the dice together. Record this total and repeat the process until you generate six numbers. 
+          Assign these results to your ability scores as you see fit.</td>
+      </tr>
+      <tr>
+        <td>Point Buy</td>
+        <td>Each character receives a number of points to spend on increasing his basic attributes. In this method, all attributes start at a base of 10. 
+          A character can increase an individual score by spending some of his points. Likewise, he can gain more points to spend on other scores by decreasing one or more of his ability scores. No score can be reduced below 7 or raised above 18 using this method. 
+          After all the points are spent, apply any racial modifiers the character might have.</td>
+      </tr>
+    </table>
+
+    <p></p>
+    
+    <p>Select a method to use for stat generation:</p>
+      <input type="radio" id="standard" name="generator" value="standard">
+<label for="standard">Standard</label><br>
+<input type="radio" id="classic" name="generator" value="classic">
+<label for="classic">Classic</label><br>
+<input type="radio" id="PointBuy" name="generator" value="PointBuy">
+<label for="PointBuy">Point Buy</label>
+
+
+      <p>The six primary stats are:</p>
+<section class="spread">
+      <section class="card">
+        <header class="tooltip">Strength
+          <span class="tooltiptext">Strength is...</span>
+        </header>
+      </section>
+      
+      <section class="card">
+        <header class="tooltip">Dexterity
+          <span class="tooltiptext">Dexterity is...</span>
+        </header>
+      </section>
+
+      <section class="card">
+        <header class="tooltip">Constitution
+          <span class="tooltiptext">Constitution is...</span>
+        </header>
+      </section>
+
+      <section class="card">
+        <header class="tooltip">Wisdom
+          <span class="tooltiptext">Wisdom is...</span>
+        </header>
+      </section>
+
+      <section class="card">
+        <header class="tooltip">Intelligence
+          <span class="tooltiptext">Intelligence is...</span>
+        </header>
+      </section>
+
+      <section class="card">
+        <header class="tooltip">Charisma
+          <span class="tooltiptext">Charisma is...</span>
+        </header>
+      </section>
+    </section>
+
+    </section>
+
+
+    </section>
+    
+  </body>
+</html>
