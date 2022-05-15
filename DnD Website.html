@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <title>Dungeons and Dragons Character Generator</title>
     <!-- Link to stylesheet using rel and href attributes -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1 class="title header">D&D 5e CHARACTER GENERATOR</h1>
+      <h1 class="title">D&D 5e CHARACTER GENERATOR</h1>
 
     </header>
 
-    <img id="DNDlogo" src="https://logos-world.net/wp-content/uploads/2021/12/DnD-Symbol.png" width="400" alt="D&D Logo">
+    <figure>
+    <img id="DNDlogo" src="assets/images/DnD-Symbol.png" width="400" alt="D&D Logo">
+  </figure>
 
     <!-- TODO: add class attribute  -->
     <section>
-        <p>So, you're making a new character? Whether this is your first character or your one-hundred-and-first, this tool will work for you!</p>
-        <a href="https://i.imgur.com/MtM04Tl.jpg"> Here's a handy guide for character creation!</a>
+        <p class="center">So, you're making a new character? Whether this is your first character or your one-hundred-and-first, this tool will work for you!</p>
+        <a class="center" href="https://i.imgur.com/MtM04Tl.jpg"> Here's a handy guide for character creation!</a>
+    </section>
 
-        <section>
+    <section>
 
       <h2 class="title">Character Details</h2>
       <h3>Basic Information</h3>
@@ -118,43 +122,62 @@
 <input type="radio" id="PointBuy" name="generator" value="PointBuy">
 <label for="PointBuy">Point Buy</label>
 
+<button id="generate">Generate!</button>
 
-      <p>The six primary stats are:</p>
-<section class="spread">
+      <p>The six primary stats are below. Hover over an item for a description.</p>
+<section id="stats">
       <section class="card">
-        <header class="tooltip">Strength
-          <span class="tooltiptext">Strength is...</span>
-        </header>
+        <h2 class="tooltip">Strength
+          <span class="tooltiptext">Strength measures natural athleticism and bodily power.</span>
+        </h2>
+        <button>Increase</button>
+          <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+        <button>Decrease</button>
       </section>
       
       <section class="card">
-        <header class="tooltip">Dexterity
-          <span class="tooltiptext">Dexterity is...</span>
-        </header>
+        <h2 class="tooltip">Dexterity
+          <span class="tooltiptext">Dexterity measures physical agility, relexes, balance, and poise.</span>
+        </h2>
+        <button>Increase</button>
+        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+      <button>Decrease</button>
       </section>
 
       <section class="card">
-        <header class="tooltip">Constitution
-          <span class="tooltiptext">Constitution is...</span>
-        </header>
+        <h2 class="tooltip">Constitution
+          <span class="tooltiptext">Constitution measures health, stamina, and vital force.</span>
+        </h2>
+        <button>Increase</button>
+        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+      <button>Decrease</button>
       </section>
 
       <section class="card">
-        <header class="tooltip">Wisdom
-          <span class="tooltiptext">Wisdom is...</span>
-        </header>
+        <h2 class="tooltip">Intelligence
+          <span class="tooltiptext">Intelligence measures mental acuity, information recall, analytical skill.</span>
+        </h2>
+        <button>Increase</button>
+        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+      <button>Decrease</button>
       </section>
 
       <section class="card">
-        <header class="tooltip">Intelligence
-          <span class="tooltiptext">Intelligence is...</span>
-        </header>
+        <h2 class="tooltip">Wisdom
+          <span class="tooltiptext">Wisdom measures awareness, intuition, and insight.</span>
+        </h2>
+        <button>Increase</button>
+        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+      <button>Decrease</button>
       </section>
 
       <section class="card">
-        <header class="tooltip">Charisma
-          <span class="tooltiptext">Charisma is...</span>
-        </header>
+        <h2 class="tooltip">Charisma
+          <span class="tooltiptext">Charisma measures confidence, eloquence, and leadership.</span>
+        </h2>
+        <button>Increase</button>
+        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
+      <button>Decrease</button>
       </section>
     </section>
 

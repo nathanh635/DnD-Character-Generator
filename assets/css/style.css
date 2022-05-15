@@ -4,14 +4,31 @@
       text-align: center;
   }
 
+/*Formatting for document titles*/
+
   .title {
       font-family:Georgia, 'Times New Roman', Times, serif;
   }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+/*Logo formatting*/
+
   #DNDlogo {
       margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      border: 10px solid black;
+      background-color: white;
   }
 
+/*Format header*/
 
   header {
     position: fixed;  
@@ -24,14 +41,17 @@
     height: 80px;
   }
 
-  .header {
-      background-color: black;
-  }
+header > h1 {
+  background-color: black;
+}
 
-  img {
-    border: 10px solid black;
-    background-color: white;
-  }
+/*Formatting for intro text and link*/
+
+.center {
+  text-align: center;
+}
+
+/*Here's some formatting for the labels, input boxes and the slect boxes to give them white backgrounds*/
 
   select {
     background-color: white;
@@ -45,21 +65,33 @@
       margin-right: 20px;
   }
 
+    /*Here's where I set up the table formatting*/
+
+    table, th, td {
+      /*border-spacing: 12px;*/
+      border: 1px solid black;
+      border-collapse: collapse; 
+  }
+  table {
+      border: 5px solid black;
+  }
+
+/*Here's the setup for the tooltips for the cards*/
+
   /* Tooltip container */
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
   }
 
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 200px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    font-size: 12px;
   
     /* Position the tooltip */
     position: absolute;
@@ -70,48 +102,45 @@
     visibility: visible;
   }
 
-  table, th, td {
-      /*border-spacing: 12px;*/
-      border: 1px solid black;
-      border-collapse: collapse; 
-  }
-  table {
-      border: 5px solid black;
-  }
+  /*Here's how the cards change if the screen size changes*/
 
   @media screen and (max-width: 768px) {
-    main,
-    nav,
-    .product {
+    .card {
       flex-direction: column;
+      width: 50%;
     }
-  
-    .product-slideshow button {
-      /* Removes the slideshow buttons from the document flow */
-      display: none;
     }
-  
-    .product-details {
-      margin-left: 0;
-    }
+
+  #stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .card {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
-    float: left;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+
     width: 25%;
+    flex-direction: row;
+    border-radius: 15px;
+    margin: 15px;
+    justify-content: center;
   }
   
-  .card header {
-    padding: 20px;
-  }
   
-  .card p {
+  .card h2 {
     text-align: center;
   }
 
-  .spread {
-      display: flex;
+  button {
+display: block;
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: auto;
+margin-right: auto;
+background-color :rgb(95, 10, 10);
+color: white;
   }
+
