@@ -144,3 +144,41 @@ background-color :rgb(95, 10, 10);
 color: white;
   }
 
+h4 {
+  font-size: 26px;
+}
+
+.infoCard {
+  position: fixed;
+  width: 300px;
+  right: 100px;
+  top: 200px;
+  text-align: left;
+background-color: darkslategray;
+color: white;
+border: 10px solid rgb(95, 10, 10);
+padding: 15px;
+border-radius: 10px;
+}
+
+.info_summary {
+
+  text-align: left;
+background-color: darkslategray;
+color: white;
+}
+
+footer {
+  font-size: 12px;
+  font-style: oblique;
+}
+
+/*Page displays as one column at 768px or smaller   */
+@media (max-width: 768px) {
+
+  .infoCard {
+    width: 100%;
+    bottom: 0px;
+  }
+
+}

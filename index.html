@@ -42,6 +42,21 @@
         <option value="Dragonborn">Dragonborn</option>
       </select>
 
+      <ul class="raceBrief"></ul>
+
+      <label for="subrace">Choose a subrace:</label>
+
+      <select name="subrace" id="subrace">
+        <option value="Human">Human</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="HalfElf">Half Elf</option>
+        <option value="Gnome">Gnome</option>
+        <option value="HalfOrc">Half Orc</option>
+        <option value="Tiefling">Tiefling</option>
+        <option value="Dragonborn">Dragonborn</option>
+      </select>
+
       <P></P>
 
      
@@ -64,20 +79,52 @@
         <option value="Artificer">Artificer</option>
       </select>
 
+      <ul class="classBrief"></ul>
+
+      <!-- <label for="subclass">Choose a subclass:</label>
+
+      <select name="class" id="class">
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+        <option value="Artificer">Artificer</option>
+      </select> -->
+
     </section>
       <P></P>
 
       <section>
 
       <form>
-        <label for="playername">Player Name:</label>
-        <input type="text" id="Playername" name="Playername"><br>
+        <label for="playerName">Player Name:</label>
+        <input type="text" id="playerName" name="playerName"><br>
         <label for="name">Character Name:</label>
         <input type="text" id="name" name="name"><br>
         <label for="age">Age:</label>
         <input type="number" min="0" id="age" name="age">
 
       </form>
+
+      <div class="infoCard">
+
+        <p class="info_summary">Player Name: <br>
+          Name: <br>
+          Age: <br>
+        Race: <br>
+      Class: </p>
+
+    </div>
+
+      <button onclick="update()">Update!</button>
 
     </section>
 
@@ -122,7 +169,7 @@
 <input type="radio" id="PointBuy" name="generator" value="PointBuy">
 <label for="PointBuy">Point Buy</label>
 
-<button id="generate">Generate!</button>
+<button onclick="generateStats()">Generate!</button>
 
       <p>The six primary stats are below. Hover over an item for a description.</p>
 <section id="stats">
@@ -130,54 +177,54 @@
         <h2 class="tooltip">Strength
           <span class="tooltiptext">Strength measures natural athleticism and bodily power.</span>
         </h2>
-        <button>Increase</button>
-          <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-        <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+          <h4 id="str" class="statblock">0</h4>
+        <button class="statbutton">Decrease</button>
       </section>
       
       <section class="card">
         <h2 class="tooltip">Dexterity
           <span class="tooltiptext">Dexterity measures physical agility, relexes, balance, and poise.</span>
         </h2>
-        <button>Increase</button>
-        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-      <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+        <h4 id="dex" class="statblock">0</h4>
+      <button class="statbutton">Decrease</button>
       </section>
 
       <section class="card">
         <h2 class="tooltip">Constitution
           <span class="tooltiptext">Constitution measures health, stamina, and vital force.</span>
         </h2>
-        <button>Increase</button>
-        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-      <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+        <h4 id="con" class="statblock">0</h4>
+      <button class="statbutton">Decrease</button>
       </section>
 
       <section class="card">
         <h2 class="tooltip">Intelligence
           <span class="tooltiptext">Intelligence measures mental acuity, information recall, analytical skill.</span>
         </h2>
-        <button>Increase</button>
-        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-      <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+        <h4 id="int" class="statblock">0</h4>
+      <button class="statbutton">Decrease</button>
       </section>
 
       <section class="card">
         <h2 class="tooltip">Wisdom
           <span class="tooltiptext">Wisdom measures awareness, intuition, and insight.</span>
         </h2>
-        <button>Increase</button>
-        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-      <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+        <h4 id="wis" class="statblock">0</h4>
+      <button class="statbutton">Decrease</button>
       </section>
 
       <section class="card">
         <h2 class="tooltip">Charisma
           <span class="tooltiptext">Charisma measures confidence, eloquence, and leadership.</span>
         </h2>
-        <button>Increase</button>
-        <p>When we learn Javascript, there will be an input box and the buttons will make the number go up and down!</p>
-      <button>Decrease</button>
+        <button class="statbutton">Increase</button>
+        <h4 id="cha" class="statblock">0</h4>
+      <button class="statbutton">Decrease</button>
       </section>
     </section>
 
@@ -185,6 +232,13 @@
 
 
     </section>
+
+    <!--Footer-->
+<footer>
+  <h3>Dungeons and Dragons is &copy Wizards of the Coast. </h3>
+</footer>
+
+    <script src="script.js"></script>
     
   </body>
 </html>
